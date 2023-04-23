@@ -18,6 +18,17 @@
             </div>
         {{- end -}}
 
+        {{- /* 部屋の大きさ指定 */ -}}
+    
+        <table style="margin: 0 auto; width: 80vw;">
+            <tr>
+                <td><a href="{{ printf "%s/tags/small" .Permalink }}"><button style="width: 20vw; height: 10vh;">small</button></a></td>
+                <td><a href="{{ printf "%s/tags/medium" .Permalink }}"><button style="width: 20vw; height: 10vh;">medium</button></a></td>
+                <td><a href="{{ printf "%s/tags/large" .Permalink }}"><button style="width: 20vw; height: 10vh;">large</button></a></td>
+            </tr>
+        </table>
+    
+
         {{- /* Posts */ -}}
         {{- if ne $posts.enable false | and .Site.RegularPages -}}
             {{- /* Paginate */ -}}
